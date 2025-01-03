@@ -1,0 +1,28 @@
+.projects {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  background-color: #adb9bc;
+  height: 300px;
+  width: 250px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.projectTitle {
+  margin-top: 50%;
+  font-size: 30px;
+  font-family: Karla;
+  text-align: center;
+}
+
+.projectDesc {
+  font-size: 20px;
+  font-family: Karla;
+  text-align: justify;
+  padding: 5%;
+}

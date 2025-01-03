@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contactBody {
+  background-color: #dbd9d0;
+  min-height: calc(100vh);
+}
+
+.contactFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0px;
+}
+
+.contact {
+  width: 50%;
+  margin-top: 7%;
+  margin-bottom: 75px;
+  justify-content: center;
+}
+
+.contactButton {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.logo {
+  width: 80px;
+  margin-right: 80px;
+  margin-left: 80px;
+}
