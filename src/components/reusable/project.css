@@ -1,6 +1,6 @@
 .projects {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .project {
@@ -16,15 +16,15 @@
 }
 
 .projectTitle {
+  font-size: 1.4rem;
   padding: 1.5rem;
-  font-size: 1.75rem;
   font-family: Karla;
   text-align: center;
 }
 
 .projectDesc {
   padding: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-family: Karla;
 }
 
