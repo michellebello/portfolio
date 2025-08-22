@@ -6,6 +6,8 @@
 .project {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #adb9bc;
   height: 300px;
   width: 250px;
@@ -14,15 +16,18 @@
 }
 
 .projectTitle {
-  margin-top: 50%;
-  font-size: 30px;
+  padding: 1.5rem;
+  font-size: 1.75rem;
   font-family: Karla;
   text-align: center;
 }
 
 .projectDesc {
-  font-size: 20px;
+  padding: 2rem;
+  font-size: 1.2rem;
   font-family: Karla;
-  text-align: justify;
-  padding: 5%;
+}
+
+.projectLogo {
+  width: 4.5rem;
 }

@@ -2,19 +2,28 @@ import React from "react";
 import TopBar from "./reusable/TopBar";
 import "./styles/projects.css";
 import Project from "./reusable/Project";
+import cuentaLogo from "../components/pictures/logoCuenta.png";
+import mepLogo from "../components/pictures/logomark.png";
+import tfLogo from "../components/pictures/tfLogo.png";
 
 const PROJECT_LIST = [
   {
-    name: "Project1",
-    description: "Lorem ipsum dolor sit amet.",
+    name: "Cuenta",
+    description:
+      "A web app to track your spendings, plan your budget, and work towards your financial goals.",
+    logo: cuentaLogo,
   },
   {
-    name: "Project2",
-    description: "Ohh yeah!",
+    name: "Mise En Plate",
+    description:
+      "A recipe website, where users can upload, view, and review recipes.",
+    logo: mepLogo,
   },
   {
-    name: "Project3",
-    description: "Can I borrow your notes?",
+    name: "Tutti Frutti",
+    description:
+      "A fun classic game where users can join parties to play this game.",
+    logo: tfLogo,
   },
 ];
 
@@ -31,6 +40,7 @@ class Projects extends React.Component {
                 <Project
                   labelFront={project.name}
                   labelBack={project.description}
+                  labelLogo={project.logo}
                 />
               );
             })}
