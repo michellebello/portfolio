@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.topBar {
+  height: 2rem;
+}
+
+.topBar-left .michelle {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.menu-button {
+  display: block;
+  padding: 0.2rem;
+  position: fixed;
+  top: 0.6rem;
+  right: 0.8rem;
+  z-index: 1100;
+  background: transparent;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 3.25rem;
+  right: 0.05rem;
+  background: #dbd9d0;
+  z-index: 1099;
+  width: 10rem;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.homeBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  padding: 0.2rem;
+  gap: 1rem;
+}
+
+.leftHome {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.mainText {
+  text-align: left;
+  color: #8693ab;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: Karla;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+}
+
+.smallText {
+  color: #637074;
+  text-align: left;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: Karla;
+  margin-left: 0;
+  padding: 1rem;
+}
+
+.rightHome {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.avatar {
+  width: 100%;
+}

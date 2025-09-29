@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
+import { TextAlignJustify } from "lucide-react";
 import pic1 from "./pictures/pic1.png";
 import pic2 from "./pictures/pic2.png";
 import pic3 from "./pictures/pic3.png";
@@ -7,6 +9,9 @@ import pic4 from "./pictures/pic4.png";
 import "./styles/home.css";
 
 function Home() {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const [open, setOpen] = useState(false);
+
   const pics = [pic1, pic2, pic3, pic4];
   const [pic, setPics] = useState(pics[0]);
 
@@ -34,21 +39,57 @@ function Home() {
   ];
 
   return (
-    <div>
-      <div className="topBar">
-        <p className="michelle">Michelle</p>
-        <li>
-          <ul>
-            {PIC_INFO.map((pic) => {
-              return (
-                <NavLink to={pic.path} onMouseEnter={() => setPics(pic.source)}>
-                  {pic.label}
-                </NavLink>
-              );
-            })}
-          </ul>
-        </li>
-      </div>
+    <div className="total-home">
+      <header className="topBar">
+        <div className="topBar-left">
+          <p className="michelle">Michelle</p>
+        </div>
+        <div className="topBar-right">
+          {isMobile ? (
+            <>
+              <button
+                className="menu-button"
+                aria-label="Open menu"
+                onClick={() => setOpen(!open)}
+              >
+                <TextAlignJustify className="button-icon" />
+              </button>
+
+              {open && (
+                <nav className="mobile-menu" role="menu">
+                  {PIC_INFO.map((item) => (
+                    <NavLink
+                      key={item.label}
+                      to={item.path}
+                      onClick={() => {
+                        setPics(item.source);
+                        setOpen(false);
+                      }}
+                    >
+                      {item.label}
+                    </NavLink>
+                  ))}
+                </nav>
+              )}
+            </>
+          ) : (
+            <nav className="desktop-nav" role="navigation">
+              <ul>
+                {PIC_INFO.map((item) => (
+                  <li key={item.label}>
+                    <NavLink
+                      to={item.path}
+                      onMouseEnter={() => setPics(item.source)}
+                    >
+                      {item.label}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )}
+        </div>
+      </header>
       <div className="homeBody">
         <div className="leftHome">
           <p className="mainText">Hi there!</p>
@@ -58,7 +99,7 @@ function Home() {
           </p>
         </div>
         <div className="rightHome">
-          <img alt="pic" src={pic}></img>
+          <img alt="pic" src={pic} className="avatar"></img>
         </div>
       </div>
     </div>

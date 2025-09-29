@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import "./topBar.css";
+import "./desktopTopBar.css";
 
-function TopBar() {
+function DesktopTopBar() {
   const LINK_INFO = [
     {
       path: "/",
@@ -24,8 +24,8 @@ function TopBar() {
   return (
     <div className="topBar">
       <p className="michelle">Michelle</p>
-      <li>
-        <ul>
+      <li className="topBar-li">
+        <ul className="topBar-ul">
           {LINK_INFO.map((link) => {
             return <NavLink to={link.path}>{link.label}</NavLink>;
           })}
@@ -35,4 +35,4 @@ function TopBar() {
   );
 }
 
-export default TopBar;
+export default DesktopTopBar;

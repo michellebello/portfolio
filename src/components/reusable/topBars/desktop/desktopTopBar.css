@@ -14,10 +14,10 @@
   justify-content: space-between;
   background-color: #faf8ef;
   min-width: calc(100vh);
-  height: 52px;
+  height: 3.25rem;
 }
 
-li {
+.topBar-li {
   display: flex;
   flex-direction: row;
   background-color: #faf8ef;
@@ -29,13 +29,13 @@ li {
 
 .michelle {
   justify-content: left;
-  padding: 11px;
+  padding: 0.7rem;
   color: #1e1e1e;
   text-align: center;
   font-size: 1.4rem;
   font-family: Karla;
   font-weight: bold;
-  margin-left: 25px;
+  margin-left: 1.5rem;
   margin-right: 40%;
 }
 
@@ -46,8 +46,8 @@ a {
   text-decoration: none;
   font-size: 1.1rem;
   font-family: Karla;
-  margin-right: 25px;
-  margin-left: 25px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
 }
 
 a:not(.active):hover {
