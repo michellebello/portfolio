@@ -48,7 +48,6 @@ function Home() {
           </NavLink>
         </div>
         <div className="topBar-right">
-          {console.log("isMobile is" + isMobile)}
           {isMobile ? (
             <>
               <button
@@ -63,6 +62,7 @@ function Home() {
                 <nav className="mobile-menu" role="menu">
                   {PIC_INFO.map((item) => (
                     <NavLink
+                      className="mobile-menu-links"
                       key={item.label}
                       to={item.path}
                       onClick={() => {

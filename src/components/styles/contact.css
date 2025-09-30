@@ -49,21 +49,27 @@
 
 .logos {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   margin-top: 1.25rem;
+  gap: 5rem;
 }
 
 .logo {
   width: 5rem;
-  margin-right: 5rem;
-  margin-left: 5rem;
+  display: block;
+  margin: 0;
+}
+
+.contactButton {
+  display: inline-block;
+  line-height: 0;
+  margin: 0 5rem;
 }
 
 @media (max-width: 768px) {
   .contact {
     width: 50%;
-    margin-top: 0;
+    margin-top: 1rem;
     margin-bottom: 1.5rem;
     justify-content: center;
   }
@@ -80,17 +86,5 @@
 
   .logo {
     width: 4rem;
-    margin-right: 2rem;
-    margin-left: 2rem;
-  }
-
-  .contactButton {
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
   }
 }

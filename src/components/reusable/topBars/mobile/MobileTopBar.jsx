@@ -44,6 +44,7 @@ function MobileTopBar() {
             <nav className="mobile-menu" role="menu">
               {LINK_INFO.map((item) => (
                 <NavLink
+                  className="mobile-menu-links"
                   key={item.label}
                   to={item.path}
                   onClick={() => {
