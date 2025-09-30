@@ -16,6 +16,11 @@
 .contactBody {
   background-color: #dbd9d0;
   min-height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -5rem;
 }
 
 .contactFlex {
@@ -53,4 +58,39 @@
   width: 5rem;
   margin-right: 5rem;
   margin-left: 5rem;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+  }
+
+  .logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    margin-top: 0;
+  }
+
+  .logo {
+    width: 4rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
+  .contactButton {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
 }

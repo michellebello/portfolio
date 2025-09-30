@@ -39,9 +39,22 @@
   gap: 0.5rem;
 }
 
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
 .desktop-nav ul {
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.desktop-nav li {
+  display: flex;
 }
 
 .desktop-nav a {
@@ -52,6 +65,7 @@
   padding: 0.4rem;
   border-radius: 0.5rem;
 }
+
 .desktop-nav a:hover {
   background: #acbbd8;
 }
@@ -80,6 +94,7 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  margin-top: 2rem;
   gap: 4rem;
 }
 
@@ -98,7 +113,7 @@
   color: #8693ab;
   text-decoration: none;
   padding: 2rem;
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 5vw, 3rem);
   font-family: Karla;
   margin-bottom: 1.25rem;
 }
@@ -107,40 +122,59 @@
   color: #637074;
   text-align: left;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: clamp(1rem, 3vw, 1.8rem);
   margin-left: 2rem;
   font-family: Karla;
 }
 
 .rightHome {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
+  padding: 2rem;
   margin-top: 4rem;
+  margin-right: 3rem;
   width: 60%;
 }
 
 .avatar {
   justify-content: center;
-  width: 60%;
+  width: 22rem;
+}
+
+@media (max-width: 1024px) {
+  .homeBody {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .leftHome,
+  .rightHome {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .avatar {
+    width: 15rem;
+  }
 }
 
 @media (max-width: 768px) {
   .topBar {
-    height: 2rem;
+    height: 2.5rem;
   }
 
   .topBar-left .michelle {
     margin-left: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .menu-button {
     display: block;
     padding: 0.2rem;
     position: fixed;
-    top: 0.6rem;
-    right: 0.8rem;
+    top: 0.25rem;
+    right: 0.5rem;
     z-index: 1100;
     background: transparent;
   }
@@ -170,7 +204,6 @@
   .leftHome {
     display: flex;
     flex-direction: column;
-    align-items: start;
     margin-top: 1rem;
     width: 100%;
   }
@@ -202,7 +235,12 @@
   }
 
   .avatar {
-    width: 100%;
+    width: 15rem;
+  }
+}
+@media (min-width: 769px) {
+  .desktop-nav {
+    display: flex;
   }
 }
 

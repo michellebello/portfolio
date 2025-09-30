@@ -7,12 +7,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .total-page {
   width: 100%;
   min-height: 100vh;
 }
 
 .resumeBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #dbd9d0;
   min-height: calc(100vh);
 }
@@ -21,16 +25,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: -5rem;
 }
 
 .resumebox {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   color: #1e1e1e;
   margin-top: 5%;
   margin-bottom: 1.875rem;
   border-radius: 15px;
+  gap: 1rem;
 }
 
 .text {
@@ -39,23 +46,55 @@
   margin-right: 0.95rem;
   font-size: 1.5rem;
   text-align: center;
+  margin: 0;
 }
 
 .resumeButton {
-  margin-bottom: 0.95rem;
-  border-color: #868fa0;
+  border: 1px solid #868fa0;
   border-radius: 10px;
   background-color: #d9d9d9;
-  margin-top: 0.625rem;
-  width: 3.125rem;
-  padding: 0.125rem;
-}
-
-.resume {
-  width: 60%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #868fa0;
+  cursor: pointer;
 }
 
 .download {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.resume {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .resumeBody {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .resume {
+    margin-top: -5rem;
+    width: 70%;
+  }
+
+  .resumeFlex {
+    padding: 1.5rem;
+  }
+
+  .resumebox {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .text {
+    font-size: 1.4rem;
+    text-align: center;
+  }
 }

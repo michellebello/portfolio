@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { TextAlignJustify } from "lucide-react";
+import "./mobileTopBar.css";
 
 function MobileTopBar() {
   const LINK_INFO = [

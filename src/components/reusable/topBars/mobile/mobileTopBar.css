@@ -9,22 +9,26 @@
 }
 
 .topBar {
-  height: 2rem;
+  height: 2.5rem;
 }
 
 .topBar-left .michelle {
   margin-left: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 
 .menu-button {
   display: block;
-  padding: 0.2rem;
+  padding: 0.05rem;
   position: fixed;
-  top: 0.6rem;
-  right: 0.8rem;
+  top: 0.45rem;
+  right: 1rem;
   z-index: 1100;
   background: transparent;
+}
+
+.button-icon {
+  align-items: center;
 }
 
 .mobile-menu {
@@ -38,51 +42,4 @@
 
 .desktop-nav {
   display: none;
-}
-
-.homeBody {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-self: center;
-  padding: 0.2rem;
-  gap: 1rem;
-}
-
-.leftHome {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  margin-top: 1rem;
-  width: 100%;
-}
-
-.mainText {
-  text-align: left;
-  color: #8693ab;
-  text-decoration: none;
-  font-size: 2rem;
-  font-family: Karla;
-  margin-bottom: 0.5rem;
-  padding: 1rem;
-}
-
-.smallText {
-  color: #637074;
-  text-align: left;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-family: Karla;
-  margin-left: 0;
-  padding: 1rem;
-}
-
-.rightHome {
-  display: flex;
-  align-items: center;
-  justify-self: center;
-}
-
-.avatar {
-  width: 100%;
 }

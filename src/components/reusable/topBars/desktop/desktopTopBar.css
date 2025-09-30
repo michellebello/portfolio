@@ -13,8 +13,8 @@
   flex-direction: row;
   justify-content: space-between;
   background-color: #faf8ef;
-  min-width: calc(100vh);
-  height: 3.25rem;
+  height: 3.5rem;
+  padding: 1.5rem;
 }
 
 .topBar-li {
@@ -22,9 +22,6 @@
   flex-direction: row;
   background-color: #faf8ef;
   justify-content: right;
-  padding: 1rem 1rem;
-  margin-left: 12%;
-  margin-right: 2%;
 }
 
 .michelle {
@@ -32,11 +29,10 @@
   padding: 0.7rem;
   color: #1e1e1e;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-family: Karla;
   font-weight: bold;
-  margin-left: 1.5rem;
-  margin-right: 40%;
+  margin-right: auto;
 }
 
 a {
@@ -73,4 +69,10 @@ a:not(.active):hover {
   color: #1e1e1e;
   padding: 0.4rem;
   border-radius: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .topBar-li {
+    gap: 0.2rem;
+  }
 }

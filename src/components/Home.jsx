@@ -44,6 +44,7 @@ function Home() {
         <div className="topBar-left">
           <p className="michelle">Michelle</p>
         </div>
+
         <div className="topBar-right">
           {isMobile ? (
             <>

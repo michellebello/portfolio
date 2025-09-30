@@ -3,7 +3,7 @@ import DesktopTopBar from "../components/reusable/topBars/desktop/DesktopTopBar.
 import MobileTopBar from "./reusable/topBars/mobile/MobileTopBar.jsx";
 import { useMediaQuery } from "react-responsive";
 import resume from "./pictures/resume.svg";
-import download from "./pictures/download.svg";
+import { Download } from "lucide-react";
 import "./styles/resume.css";
 
 function Resume() {
@@ -26,13 +26,13 @@ function Resume() {
       <header>{isMobile ? <MobileTopBar /> : <DesktopTopBar />}</header>
       <div className="resumeBody">
         <div className="resumeFlex">
+          <img className="resume" alt="resume" src={resume}></img>
           <div className="resumebox">
             <p className="text"> Download my resume here </p>
             <button className="resumeButton" onClick={onClickResume}>
-              <img className="download" alt="download" src={download}></img>
+              <Download className="download" />
             </button>
           </div>
-          <img className="resume" alt="resume" src={resume}></img>
         </div>
       </div>
     </div>

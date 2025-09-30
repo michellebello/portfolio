@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import DesktopTopBar from "./reusable/topBars/desktop/DesktopTopBar.jsx";
 import MobileTopBar from "./reusable/topBars/mobile/MobileTopBar.jsx";
@@ -18,12 +19,14 @@ function Contact() {
           <div className="logos">
             <a
               href="https://www.linkedin.com/in/michellebellov/"
+              target="_blank"
               className="contactButton"
             >
               <img className="logo" alt="linkedin" src={linkedin}></img>
             </a>
             <a
               href="https://github.com/michellebello"
+              target="_blank"
               className="contactButton"
             >
               <img className="logo" alt="github" src={github}></img>

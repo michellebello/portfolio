@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #adb9bc;
+  background-color: #b0bec1;
   height: 18.75rem;
   width: 15.625rem;
   padding: 0.625rem;
@@ -20,14 +20,44 @@
   padding: 1.5rem;
   font-family: Karla;
   text-align: center;
+  font-weight: 400;
+  color: rgb(87, 91, 91);
 }
 
 .projectDesc {
   padding: 2rem;
-  font-size: 1.2em;
+  font-size: 1.2rem;
+  text-align: center;
   font-family: Karla;
+  font-weight: 200;
+  color: rgb(87, 91, 91);
 }
 
 .projectLogo {
   width: 4.5rem;
+}
+
+@media (max-width: 768px) {
+  .project {
+    width: 10rem;
+    height: 12rem;
+    padding: 0.5rem;
+  }
+
+  .projectTitle {
+    font-size: 1.2rem;
+    padding: 0.75rem;
+    font-weight: 500;
+    color: rgb(87, 91, 91);
+  }
+
+  .projectDesc {
+    padding: 1rem;
+    font-size: 0.9rem;
+    font-weight: 200;
+  }
+
+  .projectLogo {
+    width: 3.2rem;
+  }
 }
