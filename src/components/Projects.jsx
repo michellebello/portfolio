@@ -16,18 +16,27 @@ function Projects() {
       description:
         "A web app to track your spendings, plan your budget, and work towards your financial goals.",
       logo: cuentaLogo,
+      githubLinks: {
+        diario: "https://github.com/michellebello/diario",
+        contador: "https://github.com/michellebello/contador",
+      },
     },
     {
       name: "Mise En Plate",
       description:
         "A recipe website, where users can upload, view, and review recipes.",
       logo: mepLogo,
+      githubLinks: {
+        "mep-frontend": "https://github.com/neon-super-nova/mep-frontend",
+        "mep-backend": "https://github.com/neon-super-nova/mep-backend",
+      },
     },
     {
       name: "Tutti Frutti",
       description:
         "A fun classic game where users can join parties to play this game.",
       logo: tfLogo,
+      githubLinks: { pokedex: "https://github.com/michellebello/pokedex" },
     },
   ];
 
@@ -45,6 +54,7 @@ function Projects() {
                   labelFront={project.name}
                   labelBack={project.description}
                   labelLogo={project.logo}
+                  githubLinks={project.githubLinks}
                 />
               );
             })}

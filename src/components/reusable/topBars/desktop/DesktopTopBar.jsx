@@ -23,7 +23,10 @@ function DesktopTopBar() {
 
   return (
     <div className="topBar">
-      <p className="michelle">Michelle</p>
+      <NavLink key="michelle" to="/" className="michelle">
+        {" "}
+        Michelle{" "}
+      </NavLink>
       <li className="topBar-li">
         <ul className="topBar-ul">
           {LINK_INFO.map((link) => {

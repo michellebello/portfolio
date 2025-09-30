@@ -14,14 +14,15 @@
 
 .topBar-left .michelle {
   margin-left: 0.5rem;
-  font-size: 1.15rem;
+  padding: 0.2rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .menu-button {
   display: block;
   padding: 0.05rem;
   position: fixed;
-  top: 0.45rem;
+  top: 0.55rem;
   right: 1rem;
   z-index: 1100;
   background: transparent;

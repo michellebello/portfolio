@@ -9,7 +9,7 @@ import pic4 from "./pictures/pic4.png";
 import "./styles/home.css";
 
 function Home() {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const [open, setOpen] = useState(false);
 
   const pics = [pic1, pic2, pic3, pic4];
@@ -42,10 +42,13 @@ function Home() {
     <div className="total-home">
       <header className="topBar">
         <div className="topBar-left">
-          <p className="michelle">Michelle</p>
+          <NavLink key="michelle" to="/" className="michelle">
+            {" "}
+            Michelle{" "}
+          </NavLink>
         </div>
-
         <div className="topBar-right">
+          {console.log("isMobile is" + isMobile)}
           {isMobile ? (
             <>
               <button

@@ -26,26 +26,26 @@
 .topBar-left .michelle {
   font-family: Karla, sans-serif;
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   color: #1e1e1e;
-  padding: 0.7rem 0;
   margin-right: 0;
 }
 
 .topBar-right {
-  margin-left: auto;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-left: auto;
 }
 
-.desktop-nav {
+.topBar .topBar-right .desktop-nav {
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-.desktop-nav ul {
+.topBar .topBar-right .desktop-nav ul {
+  flex: 1;
   display: flex;
   list-style: none;
   margin: 0;
@@ -53,11 +53,11 @@
   gap: 1rem;
 }
 
-.desktop-nav li {
+.topBar .topBar-right .desktop-nav li {
   display: flex;
 }
 
-.desktop-nav a {
+.topBar .topBar-right .desktop-nav a {
   text-decoration: none;
   color: #1e1e1e;
   font-family: Karla, sans-serif;
@@ -66,7 +66,7 @@
   border-radius: 0.5rem;
 }
 
-.desktop-nav a:hover {
+.topBar .topBar-right .desktop-nav a:hover {
   background: #acbbd8;
 }
 
@@ -89,26 +89,27 @@
 
 /* home body content */
 
-.homeBody {
+.total-home .homeBody {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  gap: 5.5rem;
+  min-height: calc(100vh);
   margin-top: 2rem;
-  gap: 4rem;
 }
 
-.leftHome {
+.total-home .homeBody .leftHome {
   display: flex;
   flex-direction: column;
   justify-content: left;
   align-self: center;
-  padding: 2rem;
-  margin-top: 4rem;
-  width: 40%;
+  padding: 3rem;
+  width: 60%;
+  margin-top: -10rem;
 }
 
-.mainText {
+.total-home .homeBody .leftHome .mainText {
   text-align: left;
   color: #8693ab;
   text-decoration: none;
@@ -118,7 +119,7 @@
   margin-bottom: 1.25rem;
 }
 
-.smallText {
+.total-home .homeBody .leftHome .smallText {
   color: #637074;
   text-align: left;
   text-decoration: none;
@@ -127,19 +128,19 @@
   font-family: Karla;
 }
 
-.rightHome {
+.total-home .homeBody .rightHome {
   display: flex;
   justify-content: right;
   align-items: center;
   padding: 2rem;
-  margin-top: 4rem;
-  margin-right: 3rem;
-  width: 60%;
+  width: 50%;
+  margin-top: -10rem;
 }
 
-.avatar {
+.total-home .homeBody .rightHome .avatar {
   justify-content: center;
-  width: 22rem;
+  width: 25rem;
+  padding: 2rem;
 }
 
 @media (max-width: 1024px) {
@@ -188,59 +189,50 @@
     width: 10rem;
   }
 
-  .desktop-nav {
+  .topBar .topBar-right .desktop-nav {
     display: none;
   }
 
-  .homeBody {
+  .total-home .homeBody {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-self: center;
     padding: 0.2rem;
-    gap: 1rem;
+    gap: 7rem;
   }
 
-  .leftHome {
+  .total-home .homeBody .leftHome {
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
     width: 100%;
   }
 
-  .mainText {
+  .total-home .homeBody .leftHome .mainText {
     text-align: left;
     color: #8693ab;
     text-decoration: none;
-    font-size: 2rem;
-    font-family: Karla;
     margin-bottom: 0.5rem;
     padding: 1rem;
   }
 
-  .smallText {
+  .total-home .homeBody .leftHome .smallText {
     color: #637074;
     text-align: left;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-family: Karla;
     margin-left: 0;
     padding: 1rem;
   }
 
-  .rightHome {
+  .total-home .homeBody .rightHome {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-self: center;
+    width: 100%;
   }
 
-  .avatar {
-    width: 15rem;
-  }
-}
-@media (min-width: 769px) {
-  .desktop-nav {
-    display: flex;
+  .total-home .homeBody .rightHome .avatar {
+    width: 20rem;
   }
 }
 

@@ -28,8 +28,10 @@ function MobileTopBar() {
   return (
     <div className="topBar">
       <div className="topBar-left">
-        <p className="michelle">Michelle</p>
-
+        <NavLink key="michelle" to="/" className="michelle">
+          {" "}
+          Michelle{" "}
+        </NavLink>
         <div className="topBar-right">
           <button
             className="menu-button"
