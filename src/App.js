@@ -2,14 +2,45 @@ import Home from "./components/Home.jsx";
 import Projects from "./components/Projects.jsx";
 import Resume from "./components/Resume.jsx";
 import Contact from "./components/Contact.jsx";
+import LoadingPage from "./components/reusable/LoadingPage.jsx";
+import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const MIN_LOADING_TIME = 1000;
+    const startTime = Date.now();
+
+    const finishLoading = () => {
+      const timeElapsed = Date.now() - startTime;
+      const delay = Math.max(0, MIN_LOADING_TIME - timeElapsed);
+
+      setTimeout(() => {
+        setIsLoading(false);
+      }, delay);
+    };
+
+    if (document.readyState === "complete") {
+      setIsLoading(false);
+    } else {
+      window.addEventListener("load", finishLoading);
+      return () => window.removeEventListener("load", finishLoading);
+    }
+  }, []);
+
   return (
-    <BrowserRouter>
-      <AnimationRoutes></AnimationRoutes>
-    </BrowserRouter>
+    <>
+      {isLoading ? (
+        <LoadingPage />
+      ) : (
+        <BrowserRouter>
+          <AnimationRoutes></AnimationRoutes>
+        </BrowserRouter>
+      )}
+    </>
   );
 }
 
@@ -54,10 +85,11 @@ const AnimationRoutes = () => {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        {ROUTE_INFO.map((route) => {
-          return <Route path={route.path} element={route.element}></Route>;
+        {ROUTE_INFO.map((route, idx) => {
+          return (
+            <Route key={idx} path={route.path} element={route.element}></Route>
+          );
         })}
-        ;
       </Routes>
     </AnimatePresence>
   );

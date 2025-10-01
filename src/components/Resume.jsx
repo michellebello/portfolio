@@ -22,7 +22,7 @@ function Resume() {
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
   return (
-    <div classNmae="total-page">
+    <div className="total-page">
       <header>{isMobile ? <MobileTopBar /> : <DesktopTopBar />}</header>
       <div className="resumeBody">
         <div className="resumeFlex">

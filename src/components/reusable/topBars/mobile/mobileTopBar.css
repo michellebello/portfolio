@@ -32,22 +32,26 @@
 }
 
 .mobile-menu {
+  background-color: #dbd9d0;
   position: fixed;
-  top: 4rem;
-  right: 0.3rem;
-  padding: 0;
-
+  top: 3.15rem;
+  right: 0.8rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-
   flex: 0 0 auto;
 }
 
 .mobile-menu .mobile-menu-links {
   display: block;
   white-space: nowrap;
-  padding: 0.2rrem;
+  padding: 0.25rem;
+  font-weight: 350;
   text-align: right;
 }
 

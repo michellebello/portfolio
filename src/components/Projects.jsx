@@ -50,6 +50,7 @@ function Projects() {
             {PROJECT_LIST.map((project) => {
               return (
                 <Project
+                  key={project.name}
                   className="project"
                   labelFront={project.name}
                   labelBack={project.description}
