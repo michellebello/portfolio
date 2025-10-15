@@ -20,7 +20,9 @@ function Project({ labelFront, labelBack, labelLogo, githubLinks }) {
       <div className="project" onClick={flipCard}>
         <p className="projectDesc">{labelBack}</p>
         <div className="github-info-container">
-          <img alt="github" src={github} className="github-logo" />
+          <div className="github-info-left">
+            <img alt="github" src={github} className="github-logo" />
+          </div>
           <div className="github-links">
             {Object.entries(githubLinks).map(([key, value]) => (
               <a

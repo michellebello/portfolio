@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   background-color: #b0bec1;
-  height: 18.75rem;
+  height: 19rem;
   width: 16rem;
   padding: 0.625rem;
   border-radius: 20px;
@@ -43,11 +43,25 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  gap: 0rem;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  height: 2.5rem;
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.github-info-left {
+  flex-shrink: 0;
+  width: 0.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .github-logo {
+  position: absolute;
+  left: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
   width: 1.5rem;
 }
 
@@ -57,13 +71,39 @@
   align-items: center;
   justify-content: center;
   gap: 0.3rem;
+  width: 10rem;
+  height: 3.5rem;
 }
 
 .github-link {
+  position: relative;
+  display: inline-block;
+  height: 2rem;
   font-size: 0.9rem;
   font-weight: 300;
   color: rgb(33, 35, 35);
   font-family: Karla;
+  line-height: 1.2;
+  padding: 0.1rem;
+  border-radius: 4px;
+  transition: color 0.2s ease;
+  transform: translateZ(0);
+}
+
+.github-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  background: transparent;
+  transition: background 0.2s ease;
+  z-index: -1;
+  padding: 0.1rem;
+}
+
+.github-link:active {
+  opacity: 0.8;
+  padding: 0.1rem;
 }
 
 @media (max-width: 768px) {
@@ -90,20 +130,25 @@
     width: 3.2rem;
   }
 
+  .github-info-container {
+    gap: 0.2rem;
+  }
+
   .github-logo {
+    margin-left: 0.5rem;
     width: 1.2rem;
+    left: 2rem;
   }
 
   .github-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 0.25rem;
+    width: 8rem;
+    height: 2.5rem;
+    right: 1rem;
   }
 
   .github-link {
-    font-size: 0.8rem;
+    font-size: clamp(0.75rem, 1vw, 0.8rem);
     font-weight: 300;
     color: rgb(33, 35, 35);
     font-family: Karla;
